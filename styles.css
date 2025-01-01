@@ -39,3 +39,26 @@ button {
 button:hover {
   background: #0056b3;
 }
+
+#inventory {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#inventory h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#items {
+  list-style: none;
+  padding: 0;
+}
+
+#items li {
+  font-size: 14px;
+  color: #333;
+}
