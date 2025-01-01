@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修仙文字游戏</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #game-container {
+      max-width: 600px;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    #output {
+      height: 150px;
+      overflow-y: auto;
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .stats {
+      margin-bottom: 20px;
+    }
+    .stats p {
+      margin: 5px 0;
+    }
+    #actions button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #actions button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <h1>修仙文字游戏</h1>
+    <div id="output">欢迎来到修仙世界！</div>
+    <div class="stats">
+      <p>境界: <span id="境界">炼气一层</span></p>
+      <p>经验: <span id="经验">0</span></p>
+      <p>灵石: <span id="灵石">10</span></p>
+    </div>
+    <div id="actions">
+      <button onclick="闭关修炼()">闭关修炼</button>
+      <button onclick="外出历练()">外出历练</button>
+      <button onclick="查看属性()">查看属性</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
