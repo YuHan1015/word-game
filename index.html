@@ -1,19 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文字冒险游戏</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修仙模拟器</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="game">
-    <h1>文字冒险游戏</h1>
-    <p id="story">欢迎来到冒险世界！你的旅程从这里开始...</p>
-    <div id="choices">
-      <!-- 选项会通过 JavaScript 动态添加 -->
+    <div class="game-container">
+        <header class="game-header">
+            <h1>修仙模拟器</h1>
+            <div class="save-load-buttons">
+                <button id="saveBtn" class="save-btn">保存存档</button>
+                <button id="loadBtn" class="load-btn">读取存档</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="status-panel">
+                    <h2>修炼者状态</h2>
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <span class="status-label">境界：</span>
+                            <span id="level" class="status-value">凡人</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">灵力：</span>
+                            <span id="spiritual-power" class="status-value">0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">修为：</span>
+                            <span id="cultivation" class="status-value">0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">寿元：</span>
+                            <span id="lifespan" class="status-value">100</span>
+                            <span>年</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">灵石：</span>
+                            <span id="money" class="status-value">0</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="energy-bar">
+                                <div class="energy-label">体力：</div>
+                                <div class="energy-progress">
+                                    <div id="energy-fill"></div>
+                                </div>
+                                <span id="energy" class="energy-text"> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-panel">
+                    <h2>基础修炼</h2>
+                    <div class="action-group">
+                        <button id="cultivateBtn" class="action-btn">打坐修炼</button>
+                        <button id="collectBtn" class="action-btn">采集灵气</button>
+                        <button id="breakthroughBtn" class="action-btn">尝试突破</button>
+                        <button id="restBtn" class="action-btn">休息恢复</button>
+                        <button id="dailysignInBtn" class="action-btn">每日签到</button>
+                    </div>
+                    <h2>进阶操作</h2>
+                    <div class="action-group">
+                        <button id="exploreBtn" class="action-btn advanced">外出历练</button>
+                        <button id="marketBtn" class="action-btn advanced">游历坊市</button>
+                        <button id="meditationBtn" class="action-btn advanced">闭关修炼</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="inventory-panel">
+                    <h2>储物袋</h2>
+                    <div id="inventory" class="inventory-grid"></div>
+                </div>
+
+                <div class="message-panel">
+                    <h2>消息记录</h2>
+                    <div id="message-log" class="message-container"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
